@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.activiti.engine.IdentityService;
 import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
 import org.apache.commons.lang3.ArrayUtils;
@@ -28,7 +27,7 @@ public class UseController extends AbstractController {
     private static Logger logger = LoggerFactory.getLogger(UseController.class);
 
     // Activiti Identify Service
-    private IdentityService identityService = processEngine.getIdentityService();
+   // private IdentityService identityService = processEngine.getIdentityService();
 
     /**
      * 登录系统

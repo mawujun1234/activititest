@@ -55,8 +55,16 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="transactionManager" ref="transactionManager" />
 		<property name="databaseSchemaUpdate" value="true" />
+		<property name="history" value="full" />
 		<!-- <property name="jobExecutorActivate" value="false" /> -->
-		<property name="deploymentResources" value="classpath*:/com/mawujun/chapter7/leave.zip"></property>
+		<property name="deploymentResources" value="classpath*:com/mawujun/chapter10/purchase-subprocess1.bpmn"></property>
+		
+		<!-- 自定义表单字段类型 
+		<property name="customFormTypes">
+			<list>
+				<bean class="com.mawujun.chapter10.BigtextFormType" />
+			</list>
+		</property>-->
 	</bean>
 
 	<!-- Activiti引擎工厂 -->

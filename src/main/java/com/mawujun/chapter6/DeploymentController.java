@@ -11,6 +11,7 @@ import org.activiti.engine.repository.DeploymentBuilder;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.repository.ProcessDefinitionQuery;
 import org.apache.commons.io.FilenameUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,7 +27,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/chapter5")
 public class DeploymentController extends AbstractController {
 
-    RepositoryService repositoryService = processEngine.getRepositoryService();
+	@Autowired
+    RepositoryService repositoryService;// = processEngine.getRepositoryService();
 
     /**
      * 流程定义列表

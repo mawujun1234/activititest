@@ -55,7 +55,7 @@ public class TaskController extends AbstractController {
 
         // 5.16版本可以使用一下代码待办查询
         List<Task> tasks = taskService.createTaskQuery().taskCandidateOrAssigned(user.getId()).list();
-
+        //tasks.get(0).set
         mav.addObject("tasks", tasks);
         return mav;
     }
@@ -122,6 +122,8 @@ public class TaskController extends AbstractController {
         }
         formService.submitTaskFormData(taskId, formValues);
         //taskService.complete(taskId, variables);
+        //设置当前操作人，对于调用活动可以获取到当前操作人
+        //identityService.setAuthenticatedUserId(UserUtil.getUserFromSession(request.getSession()).getId());
         return TASK_LIST;
     }
 
